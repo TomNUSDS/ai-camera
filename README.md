@@ -1,34 +1,30 @@
-# React + TypeScript + Vite
+# What this project does
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+It's experimental code to get TensorflowJs AI library and models working with
+React + Typescript + Vite.
 
-Currently, two official plugins are available:
+## Working with some caveats.
+- Builds and runs dev/deploy using external ai libraries.
+- Static build requires no server-side.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Not finished:
+-  Uses a open source camera component (webcam-react ) that is a bit older. Attempted to update to work with typescript, but we should really rewrite. (See `_VideoCapturer.tsx`)
+- CSS for mobile still needs work. Camera should shrink to fit and doesn't.
+- Includes a new, generically useful "ShadowDom" component. This is used to isolate the video layout (with view-window, svg overlay, ai feedback overlays) into a competent that's style isolated from the rest of the site.
+- ID scan should use some OCR text library but doesn't yet.
+- Needs unit tests, but so much is changing/experimental that it may be overhead.
+- Needs github actions like dependabot.
 
-## Expanding the ESLint configuration
+## React + TypeScript + Vite + TensorflowJs
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+yarn
+yarn run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Deploy
 
+Merging `main` into `gh-pages` triggers a deploy.
 
 ### To add React Native support
 https://js.tensorflow.org/api_react_native/1.0.0/
