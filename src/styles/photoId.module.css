@@ -1,0 +1,124 @@
+/* must inject `--videowidth: ${targetvideoWidth}px; --videoheight: ${targetvideoWidth}px;` */
+
+
+#root {
+  --videoheight: 600px;
+  --videowidth: 800px;
+  --videoheightratio: 3;
+  --videowidthtratio: 4;
+}
+
+[data-600x600-mode] {
+  --videoheight: 600px;
+  --videowidth: 600px;
+  --videoheightratio: 1;
+  --videowidthtratio: 1;
+}
+
+[data-600x800-mode] {
+  --videoheight: 600px;
+  --videowidth: 800px;
+  --videoheightratio: 3;
+  --videowidthtratio: 4;
+}
+
+.container {
+  display: inline-block;
+  position: sticky;
+  margin: 0;
+  padding: 0;
+
+  /* this is a container break out*/
+  margin-left: -100%;
+  margin-right: -90%;
+
+  height: var(--videoheight);
+  min-height: revert !important;
+  width: 100%;
+}
+
+/* ouside shadowDom, so injected var(--foo) don't work */
+.centerviewport {
+  display: inline-block;
+  position: relative;
+  aspect-ratio: var(--videowidthtratio) / var(--videowidthtratio);
+  width: var(--videowidth);
+  /*height: var(--videoheight);*/
+  margin: 0;
+  padding: 0;
+  z-index: 20;
+}
+
+.clippingviewport {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0 auto;
+  width: var(--videowidth);
+  height: var(--videoheight);
+  overflow: hidden;
+}
+
+/*1280 x 720*/
+.video {
+  display: block;
+  position: absolute;
+  /*1280 x 720*/
+  top: calc(((720px / 2) - (var(--videoheight)/2)) * -1);
+  left: calc(((1280px / 2) - (var(--videowidth)/2)) * -1);
+
+  z-index: 2;
+}
+
+/* ai bit */
+.aioverlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  z-index: 9;
+}
+
+.svgoverlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  z-index: 8;
+}
+
+/* Really tried to make it all generic, but failed */
+.placeholder600x600 {
+  display: block;
+  width: 600px;
+  height: 600px;
+  border-radius: 3px;
+  border: 1px cornflowerblue;
+  fill: cornflowerblue;
+  fill-opacity: 80%;
+}
+
+.placeholder600x800 {
+  display: block;
+  width: 600px;
+  height: 800px;
+  border-radius: 3px;
+  border: 1px cornflowerblue;
+  fill: cornflowerblue;
+  fill-opacity: 80%;
+}
+
+.centerviewport600x600 {
+
+}
+
+/* max-width cannot be control via var(--videowidth) */
+@media only screen and (max-width: 600px) {
+  .centerviewport {
+    width: 100vw;
+    aspect-ratio: var(--videowidthtratio) / var(--videowidthtratio);
+  }
+}
+

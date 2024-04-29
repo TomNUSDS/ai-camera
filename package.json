@@ -1,0 +1,69 @@
+{
+  "name": "ai-camera",
+  "description": "Experiment/prototype project to get React+Typescript+Vite working with javascript AI Libraries",
+  "private": true,
+  "version": "0.0.2",
+  "type": "module",
+  "npmClient": "yarn",
+  "engines": {
+    "node": ">18",
+    "yarn": "^1.2.19"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@mediapipe/face_detection": "^0.4",
+    "@mediapipe/face_mesh": "^0.4",
+    "@mediapipe/selfie_segmentation": "^0.1",
+
+    "@tensorflow-models/body-segmentation": "^1.0.2",
+    "@tensorflow-models/face-detection": "^1.0.2",
+    "@tensorflow-models/face-landmarks-detection": "^1.0.5",
+    "@tensorflow/tfjs-backend-wasm": "^4.18.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.18.0",
+    "@tensorflow/tfjs-backend-webgpu": "^4.18.0",
+    "@tensorflow/tfjs-converter": "^4.18.0",
+    "@tensorflow/tfjs-core": "^4.18.0",
+
+    "@trussworks/react-uswds": "^9.0.0",
+    "@uswds/uswds": "^3.7.1",
+    "focus-trap-react": "^10.2.3",
+    "prop-types": "^15.8.1",
+
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "react-toastify": "^10.0.5"
+  },
+  "devDependencies": {
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "^7.7.1",
+    "@typescript-eslint/parser": "^7.7.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "latest",
+    "typescript": "latest",
+    "vite": "^5.1.0",
+    "vite-plugin-mediapipe": "^0.1.0",
+    "vite-plugin-static-copy": "^1.0.1"
+  },
+  "peerDependencies": {
+    "@tensorflow/tfjs-backend-webgl": "4.18",
+    "@tensorflow/tfjs-converter": "4.18",
+    "@tensorflow/tfjs-core": "4.18"
+  },
+  "resolutions": {
+    "@tensorflow/tfjs-backend-webgl": "4.18",
+    "@tensorflow/tfjs-converter": "4.18",
+    "@tensorflow/tfjs-core": "4.18"
+  }
+}

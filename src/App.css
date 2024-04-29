@@ -1,0 +1,59 @@
+#root {
+  /* These will be overridden in javascript
+  <div style={{ '--width': `${something}px`, '--height': `${something}px` }}>
+  */
+  --viewporttop: 0;
+  --viewportleft: 0;
+  --viewportwidth: 600px;
+  --viewportheight: 600px;
+
+  --videotop: 0;
+  --videoleft: 0;
+  --videowidth: 600px;
+  --videoheight: 600px;
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+
+  width: calc(100vw);
+  min-height: calc(100vh);
+
+
+  text-align: center;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.grid600 {
+  height: 800px;
+  padding-left: -20px;
+  padding-right: -20px;
+}
+
+.fullwidth-grid-container {
+  width: calc(100vw);
+}
+
+/** experiments **/
+canvas,caption,center,cite,code,dd,del,dfn,div,dl,dt,em,embed,fieldset,font,form,h1,h2,h3,h4,h5,h6,hr,i,iframe,img,ins,kbd,label,legend,li,menu,object,ol,p,pre,q,s,samp,small,span,strike,strong,sub,sup,table,tbody,td,tfoot,th,thead,tr,tt,u,ul,var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent
+}
+
+[hidden] {
+  display: none!important
+}
