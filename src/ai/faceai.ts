@@ -17,7 +17,7 @@ export const initFaceAi = async () => {
       runtime: 'mediapipe',
       maxFaces: 1,
       modelType: 'short',
-      solutionPath: "/mediapipe/",
+      solutionPath: "./mediapipe/",
       // these DO NOT WORK!
       // or 'base/node_modules/@mediapipe/face_detection' in npm.
       // solutionPath: '@mediapipe/face_detection',
