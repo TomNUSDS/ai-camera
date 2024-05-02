@@ -3,6 +3,12 @@
 It's experimental code to get TensorflowJs AI library and models working with
 React + Typescript + Vite.
 
+## Demo
+Since it's a static-only site with all the AI running in the client side javascript engine, there's a demo deployed here:
+
+https://tomnusds.github.io/ai-camera/
+
+
 ## Working with some caveats.
 - Builds and runs dev/deploy using external ai libraries.
 - Static build requires no server-side.
