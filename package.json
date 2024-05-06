@@ -55,7 +55,7 @@
     "typescript": "^5.4.5",
     "vite": "^5.1.0",
     "vite-plugin-mediapipe": "^0.1.0",
-    "vite-plugin-static-copy": "^1.0.1"
+    "vite-plugin-static-copy": "^1.0.4"
   },
   "peerDependencies": {
     "@tensorflow/tfjs-backend-webgl": "4.18",

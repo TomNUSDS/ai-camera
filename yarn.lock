@@ -2973,10 +2973,10 @@ vite-plugin-mediapipe@^0.1.0:
   resolved "https://registry.yarnpkg.com/vite-plugin-mediapipe/-/vite-plugin-mediapipe-0.1.0.tgz#67a03904c25b94ffb6ca4fb6c095f8c50dabff59"
   integrity sha512-B0H6ZqQbzDizG93v0vk2X2SOEhrwavuHkhE2SMUoh2KnRk9+KhNtqaxyxWm7Wj63kcCUMnuCrFYB8aLxmkDwNA==
 
-vite-plugin-static-copy@^1.0.1:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/vite-plugin-static-copy/-/vite-plugin-static-copy-1.0.3.tgz#d2d19227430c3412655a13c4dd3e2deace555d88"
-  integrity sha512-hBCCz6T0uNI3oF5oJ/Ju73rhoR+ADrJ2iLAea5+wA7kpQ8clYgY8BD+GL0w0BrqsYCbgBITOByBP/3y9Y+h93A==
+vite-plugin-static-copy@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/vite-plugin-static-copy/-/vite-plugin-static-copy-1.0.4.tgz#539fee3997622d892c47e42a277a2a8e4eef9e11"
+  integrity sha512-UtyOttgoeotSCwmBugsEZCZJZcIpjE9NGO7jlZ9OeedYpBueBdspD8waRZrjE+yQLH6qGNU2CvYB2FILviCQjg==
   dependencies:
     chokidar "^3.5.3"
     fast-glob "^3.2.11"
